@@ -26,11 +26,11 @@ primitive::primitive(
 			for (auto tr : geom.triangles)
 			{
 				tr.V0().position = matrix * tr.V0().position;
-				tr.V0().normal = (matrix * tr.V0().normal).normal();
+				tr.V0().normal = matrix.transformVector(tr.V0().normal).normal();
 				tr.V1().position = matrix * tr.V1().position;
-				tr.V1().normal = (matrix * tr.V1().normal).normal();
+				tr.V1().normal = matrix.transformVector(tr.V1().normal).normal();
 				tr.V2().position = matrix * tr.V2().position;
-				tr.V2().normal = (matrix * tr.V2().normal).normal();
+				tr.V2().normal = matrix.transformVector(tr.V2().normal).normal();
 
 				tr.update();
 

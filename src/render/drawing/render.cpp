@@ -129,7 +129,7 @@ renderer::renderer( HWND hWnd, unsigned int W, unsigned int H ) : m_camera(W, H)
 	// load primitives
 	vec Min, Max;
 
-	primitive("resources\\models\\sphere.obj", &m_triangles, &Min, &Max, false, matr::scale(10) * matr::translate({0, 5, 0}), false, true);
+	primitive("resources\\models\\sphere.obj", &m_triangles, &Min, &Max, false, matr::scale(2) * matr::translate({0, 0.1, 0}), false, true);
 	//float offset = 5;
 	//for (int i = 0; i < 5; i++)
 	//	for (int j = 0; j < 5; j++)
