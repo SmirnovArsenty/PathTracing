@@ -107,6 +107,7 @@ intr Triangleintersect( tri Triangle, ray Ray )
 	inter.Pos = res;
 	inter.t = t;
 	inter.Normal = normalize((Triangle.P1.Normal * w + Triangle.P2.Normal * u + Triangle.P3.Normal * v));
+	//inter.Normal = Triangle.Normal;
 	//inter.isLight = Triangle.isLight;
 	inter.Mtl = Triangle.Mtl;
 	return inter;
@@ -507,6 +508,8 @@ float3 CalcLight( ray Ray, float4 PixelPosition )
 
 		if (inter.t == 3.402823466e+38F)
 			return (0.7f).xxx; // sky box
+
+		return inter.Normal;
 
 		float R = length(Ray.Org - inter.Pos) / 100;
 		float Att = (1 / (1 + R * R));

@@ -148,6 +148,7 @@
     <ClCompile Include="src\render\geometry\obj.cpp" />
     <ClCompile Include="src\render\geometry\primitive.cpp" />
     <ClCompile Include="src\render\geometry\resources.cpp" />
+    <ClCompile Include="src\render\geometry\triangle.cpp" />
     <ClCompile Include="src\windows\input.cpp" />
     <ClCompile Include="src\windows\timer.cpp" />
     <ClCompile Include="src\windows\win.cpp" />
