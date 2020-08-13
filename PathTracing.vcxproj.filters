@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="src\core">
+      <UniqueIdentifier>{fb4e13a2-41dd-4dc0-9024-fdf6600feb4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\global">
+      <UniqueIdentifier>{76de6656-fec9-41f9-a44a-d6fb7b012cb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\render">
+      <UniqueIdentifier>{458232c7-8427-4cc5-9d22-5715da3c7b72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\render\drawing">
+      <UniqueIdentifier>{78dde3c7-9f5a-442d-9022-1af9fd771607}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\render\geometry">
+      <UniqueIdentifier>{dd25f311-17e9-443d-b838-88ffa429e007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\windows">
+      <UniqueIdentifier>{1ec03bc2-fc81-443d-a930-7504774897b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="resources\shader">
+      <UniqueIdentifier>{f41c16cf-9258-4c86-aaed-5bdbb40ecb6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources\shader\pt">
+      <UniqueIdentifier>{d05bf9d0-1f98-4a54-a7c2-f4b8ec02d8bd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\core\anim.cpp">
+      <Filter>src\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\global\mth.cpp">
+      <Filter>src\global</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\drawing\camera.cpp">
+      <Filter>src\render\drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\drawing\render.cpp">
+      <Filter>src\render\drawing</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\geometry\material.cpp">
+      <Filter>src\render\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\geometry\obj.cpp">
+      <Filter>src\render\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\geometry\primitive.cpp">
+      <Filter>src\render\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="src\render\geometry\resources.cpp">
+      <Filter>src\render\geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="src\windows\input.cpp">
+      <Filter>src\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\windows\timer.cpp">
+      <Filter>src\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\windows\win.cpp">
+      <Filter>src\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\core\anim.h">
+      <Filter>src\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\global\mth.h">
+      <Filter>src\global</Filter>
+    </ClInclude>
+    <ClInclude Include="src\global\octo_tree.h">
+      <Filter>src\global</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\drawing\camera.h">
+      <Filter>src\render\drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\drawing\render.h">
+      <Filter>src\render\drawing</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\geometry\material.h">
+      <Filter>src\render\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\geometry\obj.h">
+      <Filter>src\render\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\geometry\primitive.h">
+      <Filter>src\render\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\geometry\resources.h">
+      <Filter>src\render\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="src\render\geometry\triangle.h">
+      <Filter>src\render\geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="src\windows\input.h">
+      <Filter>src\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\windows\timer.h">
+      <Filter>src\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\windows\win.h">
+      <Filter>src\windows</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="resources\shaders\pt.pixel.hlsl">
+      <Filter>resources\shader\pt</Filter>
+    </FxCompile>
+    <FxCompile Include="resources\shaders\pt.vertex.hlsl">
+      <Filter>resources\shader\pt</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>
