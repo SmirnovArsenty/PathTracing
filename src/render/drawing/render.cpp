@@ -129,11 +129,20 @@ renderer::renderer( HWND hWnd, unsigned int W, unsigned int H ) : m_camera(W, H)
 	// load primitives
 	vec Min, Max;
 
-	primitive("resources\\models\\sphere.obj", &m_triangles, &Min, &Max, false, matr::scale(2) * matr::translate({0, 0.1, 0}), false, true);
+	//primitive("resources\\models\\sphere.obj", &m_triangles, &Min, &Max, false, matr::scale(2) * matr::translate({0, 0.1, 0}), false, true);
 	//float offset = 5;
 	//for (int i = 0; i < 5; i++)
 	//	for (int j = 0; j < 5; j++)
-	//		primitive("resources\\models\\sphere.obj", &m_triangles, &Min, &Max, false, matr::scale(0.3) * matr::translate(vec((i - 2) * offset, 0, (j - 2) * offset)), false, false);
+	//		for (int k = 0; k < 5; k++)
+	//		primitive("resources\\models\\sphere.obj", &m_triangles, &Min, &Max, false, matr::scale(0.3) * matr::translate({(i - 2) * offset, (k - 2) * offset, (j - 2) * offset}), false, false);
+	primitive("resources\\models\\sphere.obj", &m_triangles, &Min, &Max, false, matr::translate({1, 1, 1}) * matr::scale(0.3), false, true);
+	primitive("resources\\models\\sphere.obj", &m_triangles, &Min, &Max, false, matr::translate({-1, 1, 1}) * matr::scale(0.3));
+	primitive("resources\\models\\sphere.obj", &m_triangles, &Min, &Max, false, matr::translate({1, -1, 1}) * matr::scale(0.3));
+	primitive("resources\\models\\sphere.obj", &m_triangles, &Min, &Max, false, matr::translate({1, 1, -1}) * matr::scale(0.3));
+	primitive("resources\\models\\sphere.obj", &m_triangles, &Min, &Max, false, matr::translate({1, -1, -1}) * matr::scale(0.3));
+	primitive("resources\\models\\sphere.obj", &m_triangles, &Min, &Max, false, matr::translate({-1, 1, -1}) * matr::scale(0.3));
+	primitive("resources\\models\\sphere.obj", &m_triangles, &Min, &Max, false, matr::translate({-1, -1, 1}) * matr::scale(0.3));
+	primitive("resources\\models\\sphere.obj", &m_triangles, &Min, &Max, false, matr::translate({-1, -1, -1}) * matr::scale(0.3));
 
 	if (m_triangles.size() != 0)
 	{

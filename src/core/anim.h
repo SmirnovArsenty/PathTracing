@@ -29,7 +29,7 @@ namespace pt
 		 ***/
 
 		void init() override {}
-		void close() override {}
+		void close() override { delete g_instance; }
 		void erase( HDC hDC ) override {}
 		void paint( HDC hDC ) override {}
 		void clock() override { render(); }

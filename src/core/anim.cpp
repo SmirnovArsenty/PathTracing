@@ -22,7 +22,7 @@ void anim::render()
 		/* Camera response */
 		m_camera.response();
 
-			input::response();
+		input::response();
 		if (globalTime() - m_shadersReloadTime > 3)
 		{
 			//CHAR Buf[100];

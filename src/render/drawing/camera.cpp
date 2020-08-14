@@ -4,7 +4,7 @@
 using namespace pt;
 
 camera::camera( unsigned int W, unsigned int H )
-			: m_location(0, 0, 45)
+			: m_location(15, 15, 15)
 			, m_up(0, 1, 0)
 			, m_at(0, 0, 0)
 			, m_width(W), m_height(H)

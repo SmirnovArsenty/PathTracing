@@ -42,4 +42,3 @@ void timer::response()
 	}
 	m_frameCounter++;
 }
-
