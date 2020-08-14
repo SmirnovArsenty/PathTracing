@@ -6,6 +6,7 @@ win* win::g_win{ nullptr };
 BOOL win::OnCreate( CREATESTRUCT *CS )
 {
 	SetTimer(m_hWnd, m_initTimerId, 20, nullptr);
+
 	return TRUE;
 }
 
@@ -16,6 +17,7 @@ void win::OnDestroy()
 		m_isInit = FALSE;
 		close();
 		KillTimer(m_hWnd, m_refreshTimerId);
+		PostQuitMessage(30);
 	}
 	else
 	{
@@ -64,7 +66,7 @@ void win::OnTimer( int Id )
 	if (Id == m_initTimerId && !m_isInit)
 	{
 		KillTimer(m_hWnd, m_initTimerId);
-		SetTimer(m_hWnd, m_refreshTimerId, 3, nullptr);
+		SetTimer(m_hWnd, m_refreshTimerId, 1, nullptr);
 		m_isInit = TRUE;
 
 		init();
@@ -199,7 +201,7 @@ win::win( HINSTANCE hInstance )
 	m_hWnd =
 		CreateWindow(WindowClassName.c_str(),
 		"PathTracing",
-		WS_OVERLAPPED,
+		WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, CW_USEDEFAULT,
 		CW_USEDEFAULT, CW_USEDEFAULT,
 		nullptr, nullptr, hInstance, (void *)this);
